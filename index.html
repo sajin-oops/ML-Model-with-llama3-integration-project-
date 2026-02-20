@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Chord Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎹 Keyboard Chord Recognition System</h1>
+
+    <p class="subtitle">
+        Play a keyboard chord for 2 seconds and the system will identify it.
+    </p>
+
+    <form method="POST">
+        <button class="record-btn" type="submit">
+            Record & Predict
+        </button>
+    </form>
+
+    {% if predicted_chord %}
+        <div class="result-box">
+            <h2>Predicted Chord</h2>
+            <p class="chord">{{ predicted_chord }}</p>
+        </div>
+    {% endif %}
+
+<!-- new code start from here-->
+    {% if ai_feedback %}
+    <div class="result-box">
+        <h2>AI Feedback</h2>
+        <p class="feedback">{{ ai_feedback }}</p>
+    </div>
+{% endif %}
+
+<!-- new code end  here-->
+    <div class="instructions">
+        <h3>Instructions</h3>
+        <ul>
+            <li>Play one chord clearly</li>
+            <li>Hold the chord for 2 seconds</li>
+            <li>Avoid background noise</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
