@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background: #f4f6f8;
     margin: 0;
@@ -51,6 +51,97 @@ h1 {
     color: #2e7d32;
 }
 
+.instructions {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.instructions h3 {
+    color: #333;
+}
+
+.instructions ul {
+    color: #555;
+} */
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* FULL PAGE FLEX LAYOUT */
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* CENTER CARD */
+.container {
+    width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* SIDE PANELS */
+.side-panel {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 14px;
+}
+
+.side-panel h3 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+.side-panel p {
+    margin: 6px 0;
+}
+
+/* BUTTON */
+.record-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.record-btn:hover {
+    background: #45a049;
+}
+
+/* RESULT BOX */
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 8px;
+}
+
+.chord {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* INSTRUCTIONS */
 .instructions {
     margin-top: 30px;
     text-align: left;
