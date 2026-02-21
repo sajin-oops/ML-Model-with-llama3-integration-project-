@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +28,7 @@
         </div>
     {% endif %}
 
-<!-- new code start from here-->
+
     {% if ai_feedback %}
     <div class="result-box">
         <h2>AI Feedback</h2>
@@ -36,7 +36,7 @@
     </div>
 {% endif %}
 
-<!-- new code end  here-->
+
     <div class="instructions">
         <h3>Instructions</h3>
         <ul>
@@ -46,6 +46,101 @@
         </ul>
     </div>
 </div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Chord Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- LEFT SIDE -->
+    <div class="side-panel">
+        <h3>Major Chords</h3>
+        <p>C Major - C E G</p>
+        <p>D Major - D F# A</p>
+        <p>E Major - E G# B</p>
+        <p>F Major - F A C</p>
+        <p>G Major - G B D</p>
+        <p>A Major - A C# E</p>
+        <p>B Major - B D# F#</p>
+
+        <h3>Sharp Major</h3>
+        <p>C# Major - C# F G#</p>
+        <p>D# Major - D# G A#</p>
+        <p>F# Major - F# A# C#</p>
+        <p>G# Major - G# C D#</p>
+        <p>A# Major - A# D F</p>
+    </div>
+
+    <!-- CENTER -->
+    <div class="container">
+        <h1>🎹 Keyboard Chord Recognition System</h1>
+
+        <p class="subtitle">
+            Play a keyboard chord for 2 seconds and the system will identify it.
+        </p>
+
+        <form method="POST">
+            <button class="record-btn" type="submit">
+                Record & Predict
+            </button>
+        </form>
+
+        {% if predicted_chord %}
+            <div class="result-box">
+                <h2>Predicted Chord</h2>
+                <p class="chord">{{ predicted_chord }}</p>
+            </div>
+        {% endif %}
+
+        {% if ai_feedback %}
+            <div class="result-box">
+                <h2>AI Feedback</h2>
+                <p class="feedback">{{ ai_feedback }}</p>
+            </div>
+        {% endif %}
+
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <ul>
+                <li>Play one chord clearly</li>
+                <li>Hold the chord for 2 seconds</li>
+                <li>Avoid background noise</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="side-panel">
+        <h3>Minor Chords</h3>
+        <p>C Minor - C Eb G</p>
+        <p>D Minor - D F A</p>
+        <p>E Minor - E G B</p>
+        <p>F Minor - F Ab C</p>
+        <p>G Minor - G Bb D</p>
+        <p>A Minor - A C E</p>
+        <p>B Minor - B D F#</p>
+
+        <h3>Sharp Minor</h3>
+        <p>C# Minor - C# E G#</p>
+        <p>D# Minor - D# F# A#</p>
+        <p>F# Minor - F# A C#</p>
+        <p>G# Minor - G# B D#</p>
+        <p>A# Minor - A# C# F</p>
+    </div>
+
+</div>
+
 
 </body>
 </html>
